@@ -2,7 +2,7 @@
 
 Tiny Next.js “hello” container for smoke tests and IaC placeholders.
 
-![Screenshot](/screenshot.png)
+![Screenshot](/public/screenshot.png)
 
 - Big `hello 👋` in the center  
 - Light/dark toggle  
