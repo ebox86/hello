@@ -1,0 +1,140 @@
+:root {
+  --bg: #f4f4f5;
+  --fg: #09090b;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --muted: #52525b;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    Segoe UI, Roboto, sans-serif;
+}
+
+main.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #7c3aed,
+    #f97316
+  ); /* navy → purple → orange */
+  color: var(--fg);
+}
+
+main.root[data-theme='dark'] {
+  --bg: #020617;
+  --fg: #e5e7eb;
+  --card-bg: #020617;
+  --card-border: rgba(148, 163, 184, 0.35);
+  --muted: #9ca3af;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  padding: 28px 32px 24px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.6);
+  max-width: 520px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;       /* no underline */
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  padding: 4px 10px;
+  font-size: 11px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.hello-text {
+  font-size: 5rem;
+  line-height: 0.9;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 1.3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(18deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+}
+
+.debug h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.debug dl {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.debug div {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.debug dt {
+  min-width: 90px;
+  text-transform: lowercase;
+  color: var(--muted);
+}
+
+.debug dd {
+  margin: 0;
+  word-break: break-all;
+}
+
