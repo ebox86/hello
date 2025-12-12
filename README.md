@@ -34,7 +34,7 @@ Run:
 ```
 Image (distroless Node 22, Next.js standalone):
 
-- ~171 MB uncompressed (see with `docker images ghcr.io/ebox86/hello`)
+- ~172 MB uncompressed (see with `docker images ghcr.io/ebox86/hello`)
 
 ---
 
